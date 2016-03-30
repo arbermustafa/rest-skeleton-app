@@ -1,5 +1,5 @@
 {
-    "name": "rest_skeleton_app",
+    "name": "rest_kartarinore_app",
     "author": "Arber Mustafa",
     "version": "1.0.0",
     "description": "Web app RESTful",
@@ -7,13 +7,15 @@
     "license": "MIT",
     "require": {
         "slim/slim": "2.*",
-        "entomb/slim-json-api": "dev-master"
+        "entomb/slim-json-api": "dev-master",
+        "tuupola/slim-jwt-auth": "^1.0",
+        "illuminate/database": "4.1.30",
+        "vlucas/valitron": "^1.2",
+        "vlucas/phpdotenv": "^2.2"
     },
     "autoload": {
-        "classmap": [
-            "app/Controller",
-            "app/Model",
-            "app/Service"
-        ]
+        "psr-4": {
+            "App\\": "src/App"
+        }
     }
 }
