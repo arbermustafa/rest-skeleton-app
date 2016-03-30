@@ -1,3 +1,3 @@
-# slim-rest-skeleton-app
+# rest-skeleton-app
 
-REST
+RESTful skeleton application using Slim 2 + JWT
