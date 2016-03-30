@@ -1,9 +1,9 @@
 {
-    "name": "rest_kartarinore_app",
+    "name": "rest_skeleton_app",
     "author": "Arber Mustafa",
     "version": "1.0.0",
     "description": "Web app RESTful",
-    "keyword": ["slim", "RESTful", "AngularJs"],
+    "keyword": ["slim", "RESTful", "Illuminate", "AngularJs"],
     "license": "MIT",
     "require": {
         "slim/slim": "2.*",
