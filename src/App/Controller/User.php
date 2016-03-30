@@ -1,18 +1,18 @@
 <?php
 namespace App\Controller;
 
-use \App\Model\User as UserModel;
+use \App\Model\Example as ExampleModel;
 
-class User extends Base
+class Example extends Base
 {
     public static function get($id = null)
     {
         $result = null;
 
         if (null === $id) {
-            $result = UserModel::getList(1, 10);
+            $result = 'welcome';
         } else {
-            $result = UserModel::getSingle($id);
+            $result = ExampleModel::find($id);
         }
 
         self::response($result);
