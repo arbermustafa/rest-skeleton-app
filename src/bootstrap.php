@@ -26,11 +26,11 @@ $app->add(new \JsonApiMiddleware());
 $app->add(new \Slim\Middleware\JwtAuthentication(array(
     'secret' => getenv('AUTH_KEY'),
     'secure' => true,
-    'relaxed' => array('localhost', 'app.kartarinore.apacc.al'),
+    'relaxed' => array('localhost'),
     'rules' => array(
         new \App\Middleware\RequestPathRule(array(
-            'path' => '/api/v1/',
-            'passthrough' => array('/api/v1/token')
+            'path' => '/api/',
+            'passthrough' => array('/api/token')
         )),
         new \Slim\Middleware\JwtAuthentication\RequestMethodRule(array(
             'passthrough' => array('GET')
