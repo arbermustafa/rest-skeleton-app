@@ -23,12 +23,12 @@ $app->setName(getenv('APP_NAME'));
 // SLIM Middlewares INIT
 $app->view(new \JsonApiView());
 $app->add(new \JsonApiMiddleware());
-$app->add(new \Slim\Middleware\JwtAuthentication(array(
+$app->add(new \App\Middleware\Jwt\JwtAuth(array(
     'secret' => getenv('AUTH_KEY'),
     'secure' => true,
     'relaxed' => array('localhost'),
     'rules' => array(
-        new \App\Middleware\RequestPathRule(array(
+        new \App\Middleware\Jwt\RequestPathRule(array(
             'path' => '/api/',
             'passthrough' => array('/api/token')
         )),
