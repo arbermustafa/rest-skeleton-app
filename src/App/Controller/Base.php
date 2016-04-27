@@ -11,6 +11,9 @@ class Base
         return \Slim\Slim::getInstance();
     }
 
+    /**
+     * Handle request params
+     */
     protected static function getParams()
     {
         $request = self::_getApp()->request;
