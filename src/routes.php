@@ -2,4 +2,4 @@
 // API RESTful Routes
 
 // Default response
-$app->get('/', 'App\Controller\Base:welcome');
+$app->get('/', 'App\Controller\Example:welcome');
